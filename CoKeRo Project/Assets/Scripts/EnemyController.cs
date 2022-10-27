@@ -90,6 +90,7 @@ public class EnemyController : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            LevelSystem.instance.currentXP += 20;
             //drop items
             if(shouldDropItem)
             {

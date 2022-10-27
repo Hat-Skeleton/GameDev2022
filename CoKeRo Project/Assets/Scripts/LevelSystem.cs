@@ -5,20 +5,23 @@ using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
+    public static LevelSystem instance;
     public int level;
     public float currentXP;
     public float requiredXP;
 
     private float lerpTimer;
     private float delayTimer;
-    [Header("UI")]
-    public Image frontXpBar;
-    public Image backXpBar;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        frontXpBar.fillAmount = currentXP / requiredXP;
-        backXpBar.fillAmount = currentXP / requiredXP;
+        UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
+        UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
     }
 
     // Update is called once per frame
@@ -38,16 +41,16 @@ public class LevelSystem : MonoBehaviour
     public void UpdateXpUI()
     {
         float xpFraction = currentXP / requiredXP;
-        float FXP = frontXpBar.fillAmount;
+        float FXP = UIController.instance.frontXpBar.fillAmount;
         if(FXP < xpFraction)
         {
             delayTimer += Time.deltaTime;
-            backXpBar.fillAmount = xpFraction;
+            UIController.instance.backXpBar.fillAmount = xpFraction;
             if(delayTimer > 1)
             {
                 lerpTimer += Time.deltaTime;
                 float percentComplete = lerpTimer / 4;
-                frontXpBar.fillAmount = Mathf.Lerp(FXP, backXpBar.fillAmount, percentComplete);
+                UIController.instance.frontXpBar.fillAmount = Mathf.Lerp(FXP, UIController.instance.backXpBar.fillAmount, percentComplete);
             }
         }
     }
@@ -61,8 +64,10 @@ public class LevelSystem : MonoBehaviour
     public void LevelUp()
     {
         level++;
-        frontXpBar.fillAmount = 0f;
-        backXpBar.fillAmount = 0f;
+        UIController.instance.frontXpBar.fillAmount = 0f;
+        UIController.instance.backXpBar.fillAmount = 0f;
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
+        UIController.instance.levelText.text = string.Format("Level : {0}", level);
     }
+
 }
