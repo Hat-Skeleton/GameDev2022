@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
@@ -21,5 +22,11 @@ public class PauseMenuController : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
+        Time.timeScale = 1;
     }
 }
