@@ -8,7 +8,9 @@ using System;
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
+    [Header("Screens")]
     public GameObject deathScreen;
+    public GameObject pauseScreen;
 
     [Header("HealthBar")]
     public Slider healthSlider;

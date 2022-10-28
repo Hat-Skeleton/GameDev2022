@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private float activeMoveSpeed;
     public float dashSpeed = 8f, dashLength = 0.5f, dashCooldwon = 1f, dashIframes = 0.5f;
     private float dashCounter, dashCoolCounter;
-
+    public bool isPaused;
 
     private void Awake()
     {
@@ -105,6 +107,12 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        //Switch Mode of pause Menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseState();
+        }
+
         if(dashCounter > 0)
         {
             dashCounter -= Time.deltaTime;
@@ -128,5 +136,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
+    }
+
+    //flips pausestate
+    public void PauseState()
+    {
+        isPaused = !isPaused;
+        UIController.instance.pauseScreen.SetActive(isPaused);
+        Time.timeScale = Convert.ToInt32(!isPaused);
     }
 }
