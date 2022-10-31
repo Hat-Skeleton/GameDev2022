@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -27,5 +28,14 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    public IEnumerator LevelEnd()
+    {
+        PlayerController.instance.canMove = false;
 
+        UIController.instance.startFadeToBlack();
+
+        yield return new WaitForSeconds(waitToLoad);
+
+        SceneManager.LoadScene(nextLevel);
+    }
 }
