@@ -31,6 +31,8 @@ public class EnemyController : MonoBehaviour
     public GameObject[] itemsToDrop;
     public float dropPercent;
 
+    public float xpAmmount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,7 +91,7 @@ public class EnemyController : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
-            LevelSystem.instance.currentXP += 20;
+            LevelSystem.instance.currentXP += xpAmmount;
             //drop items
             if(shouldDropItem)
             {
