@@ -202,6 +202,11 @@ MonoBehaviour:
   enemyFireRate: 1.2
   shootRange: 10
   sr: {fileID: 2486740701783631589}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 7319663511159528311, guid: 031a0735e668a99428fad15d641cab07, type: 3}
+  dropPercent: 10
+  xpAmmount: 20
 --- !u!50 &2486740702223613608
 Rigidbody2D:
   serializedVersion: 4

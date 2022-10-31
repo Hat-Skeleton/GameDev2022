@@ -8,11 +8,18 @@ using System;
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
+    [Header("Screens")]
+    public GameObject deathScreen;
+    public GameObject pauseScreen;
 
+    [Header("HealthBar")]
     public Slider healthSlider;
     public TMP_Text healthBarText;
 
-    public GameObject deathScreen;
+    [Header("XpBar")]
+    public Image frontXpBar;
+    public Image backXpBar;
+    public TMP_Text levelText;
 
     private void Awake()
     {

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -31,6 +30,8 @@ public class EnemyController : MonoBehaviour
     public bool shouldDropItem;
     public GameObject[] itemsToDrop;
     public float dropPercent;
+
+    public float xpAmmount;
 
     // Start is called before the first frame update
     void Start()
@@ -90,6 +91,7 @@ public class EnemyController : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            LevelSystem.instance.currentXP += xpAmmount;
             //drop items
             if(shouldDropItem)
             {
