@@ -577,7 +577,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -880,14 +880,14 @@ Tilemap:
     m_Data: {fileID: 842444976, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1537309721, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 837851261, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 993926901, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1537309721, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 952916111, guid: fffd7cf32ae20e84cba373590dd03da4, type: 3}
   - m_RefCount: 1
@@ -978,9 +978,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1330582175
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1046,11 +1046,7 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 367948853130792342}
     m_ColliderPaths:
-    - - X: -20000100
-        Y: -39999959
-      - X: -20000100
-        Y: -40000000
-      - X: -80000000
+    - - X: -80000000
         Y: -40000000
       - X: -80000000
         Y: 40000000
@@ -1066,18 +1062,6 @@ CompositeCollider2D:
         Y: 50000000
       - X: -90000000
         Y: -50000000
-      - X: -20000100
-        Y: -50000000
-      - X: -20000100
-        Y: -50000041
-      - X: -20000041
-        Y: -50000100
-      - X: 20000041
-        Y: -50000100
-      - X: 20000100
-        Y: -50000041
-      - X: 20000100
-        Y: -50000000
       - X: 90000000
         Y: -50000000
       - X: 90000000
@@ -1086,14 +1070,6 @@ CompositeCollider2D:
         Y: -10000000
       - X: 80000000
         Y: -40000000
-      - X: 20000100
-        Y: -40000000
-      - X: 20000100
-        Y: -39999959
-      - X: 20000041
-        Y: -39999900
-      - X: -20000041
-        Y: -39999900
   m_CompositePaths:
     m_Paths:
     - - {x: 8.99997, y: -5}

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public bool closeWhenEnter, openWhenEnemyClear;
+    public bool closeWhenEnter; //openWhenEnemyClear;
 
     public GameObject[] doors;
 
-    public List<GameObject>  enemy = new List<GameObject>();
+    //public List<GameObject>  enemy = new List<GameObject>();
 
-    private bool roomActive;
+    [HideInInspector]
+    public bool roomActive;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemy.Count > 0 && roomActive && openWhenEnemyClear)
+        /*if(enemy.Count > 0 && roomActive && openWhenEnemyClear)
         {
             for(int i = 0; i < enemy.Count; i++)
             {
@@ -41,6 +42,16 @@ public class Room : MonoBehaviour
                     closeWhenEnter = false;
                 }
             }
+        }*/
+    }
+
+    public void OpenDoors()
+    {
+        foreach (GameObject door in doors)
+        {
+            door.SetActive(false);
+
+            closeWhenEnter = false;
         }
     }
 
