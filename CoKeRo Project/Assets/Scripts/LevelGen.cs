@@ -71,9 +71,30 @@ public class LevelGen : MonoBehaviour
 
         foreach(GameObject outline in genOutlines)
         {
-            int centerSelect = Random.Range(0, centerAry.Length);
+            bool genCenter = true;
 
-            Instantiate(centerAry[centerSelect], outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+            if(outline.transform.position == Vector3.zero)
+            {
+                Instantiate(centerStart, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+                genCenter = false;
+            }
+
+            if(outline.transform.position == endRoom.transform.position)
+            {
+                Instantiate(centerEnd, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+                genCenter = false;
+            }
+
+            if(genCenter)
+            {
+                int centerSelect = Random.Range(0, centerAry.Length);
+
+                Instantiate(centerAry[centerSelect], outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+            }
+
+            
         }
 
     }
