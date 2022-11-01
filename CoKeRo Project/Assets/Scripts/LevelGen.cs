@@ -14,7 +14,7 @@ public class LevelGen : MonoBehaviour
 
     public float xOffset = 18f, yOffset = 10;
 
-    public LayerMask layerMask;
+    public LayerMask whatIsRoom;
 
     public enum Direction
     {
@@ -50,7 +50,7 @@ public class LevelGen : MonoBehaviour
 
             selectedDirection = (Direction)Random.Range(0, 4);
             MoveGenPoint();
-            while(Physics2D.OverlapCircle(genPoint.position, .2f, layerMask))
+            while(Physics2D.OverlapCircle(genPoint.position, .2f, whatIsRoom))
             {
                 MoveGenPoint();
             }

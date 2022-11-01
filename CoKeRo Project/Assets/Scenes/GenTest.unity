@@ -207,7 +207,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 80
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -274,7 +274,7 @@ MonoBehaviour:
   genPoint: {fileID: 445157812}
   xOffset: 18
   yOffset: 10
-  layerMask:
+  whatIsRoom:
     serializedVersion: 2
     m_Bits: 4096
   selectedDirection: 0
