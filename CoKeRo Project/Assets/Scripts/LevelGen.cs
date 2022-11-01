@@ -31,6 +31,9 @@ public class LevelGen : MonoBehaviour
 
     private List<GameObject> genOutlines = new List<GameObject>();
 
+    public RoomCentre centerStart, centerEnd;
+    public RoomCentre[] centerAry;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +68,13 @@ public class LevelGen : MonoBehaviour
             CreateRoomOutline(room.transform.position);
         }
         CreateRoomOutline(endRoom.transform.position);
+
+        foreach(GameObject outline in genOutlines)
+        {
+            int centerSelect = Random.Range(0, centerAry.Length);
+
+            Instantiate(centerAry[centerSelect], outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+        }
 
     }
 

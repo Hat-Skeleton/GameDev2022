@@ -1234,13 +1234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dae26316699db14a952ab85c3ca1355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEnter: 1
-  openWhenEnemyClear: 0
+  closeWhenEnter: 0
   doors:
   - {fileID: 2621807954842654840}
   - {fileID: 6561759383089276285}
-  enemy:
-  - {fileID: 0}
+  roomActive: 0
 --- !u!50 &6422392894957316993
 Rigidbody2D:
   serializedVersion: 4

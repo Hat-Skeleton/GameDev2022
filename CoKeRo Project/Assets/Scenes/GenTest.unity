@@ -294,6 +294,9 @@ MonoBehaviour:
     tripleDownLeftUp: {fileID: 8398733215679078351, guid: 4c5c81b237858be40bed781bbb9d6c54, type: 3}
     tripleLeftUpRight: {fileID: 4792655345101749175, guid: 59e02a9be19ab0d40ac18e049562243d, type: 3}
     fourway: {fileID: 7843669070783257170, guid: 4b70e29750d7ddb44914e9104bb8dcc3, type: 3}
+  centerStart: {fileID: 2743391122121844802, guid: fbf09e9588d2d5c4b973273c23422e43, type: 3}
+  centerEnd: {fileID: 470447950329120501, guid: 7ed029821fa173147b67b3e3d9b9bef8, type: 3}
+  centerAry: []
 --- !u!4 &2106365398
 Transform:
   m_ObjectHideFlags: 0
