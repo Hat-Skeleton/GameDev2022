@@ -100,6 +100,24 @@ public class LevelGen : MonoBehaviour
         bool roomBelow = Physics2D.OverlapCircle(roomPostion + new Vector3(0f, -yOffset, 0f), .2f, whatIsRoom);
         bool roomLeft = Physics2D.OverlapCircle(roomPostion + new Vector3(-xOffset, 0f, 0f), .2f, whatIsRoom);
         bool roomRight = Physics2D.OverlapCircle(roomPostion + new Vector3(xOffset, 0f, 0f), .2f, whatIsRoom);
+
+        int directionCount = 0;
+        if (roomAbove)
+        {
+            directionCount += 1;
+        }
+        if (roomBelow)
+        {
+            directionCount += 1;
+        }
+        if (roomLeft)
+        {
+            directionCount += 1;
+        }
+        if (roomRight)
+        {
+            directionCount += 1;
+        }
     }
 }
 
