@@ -29,6 +29,8 @@ public class LevelGen : MonoBehaviour
 
     public RoomPrefabs rooms;
 
+    private List<GameObject> genOutlines = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -117,6 +119,37 @@ public class LevelGen : MonoBehaviour
         if (roomRight)
         {
             directionCount += 1;
+        }
+
+        switch (directionCount)
+        {
+            case 0:
+                Debug.LogError("No room");
+                break;
+            case 1:
+                if(roomAbove)
+                {
+                    genOutlines.Add(Instantiate(rooms.singleUp, roomPostion, transform.rotation));
+                }
+                if (roomBelow)
+                {
+                    genOutlines.Add(Instantiate(rooms.singleDown, roomPostion, transform.rotation));
+                }
+                if (roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.singleLeft, roomPostion, transform.rotation));
+                }
+                if (roomRight)
+                {
+                    genOutlines.Add(Instantiate(rooms.singleRight, roomPostion, transform.rotation));
+                }
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
         }
     }
 }
