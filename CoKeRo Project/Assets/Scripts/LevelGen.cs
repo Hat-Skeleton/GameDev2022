@@ -145,10 +145,52 @@ public class LevelGen : MonoBehaviour
                 }
                 break;
             case 2:
+                if (roomAbove && roomBelow)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleUpDown, roomPostion, transform.rotation));
+                }
+                if (roomAbove && roomRight)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleRightUp, roomPostion, transform.rotation));
+                }
+                if (roomAbove && roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleLeftUP, roomPostion, transform.rotation));
+                }
+                if (roomBelow && roomRight)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleRightDown, roomPostion, transform.rotation));
+                }
+                if (roomBelow && roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleLeftDown, roomPostion, transform.rotation));
+                }
+                if (roomLeft && roomRight)
+                {
+                    genOutlines.Add(Instantiate(rooms.doubleLeftRight, roomPostion, transform.rotation));
+                }
                 break;
             case 3:
+                if (roomAbove && roomBelow && roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.tripleDownLeftUp, roomPostion, transform.rotation));
+                }
+                if (roomAbove && roomBelow && roomRight)
+                {
+                    genOutlines.Add(Instantiate(rooms.tripleUpRightDown, roomPostion, transform.rotation));
+                }
+                if (roomAbove && roomRight && roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.tripleLeftUpRight, roomPostion, transform.rotation));
+                }
+                if (roomRight && roomBelow && roomLeft)
+                {
+                    genOutlines.Add(Instantiate(rooms.tripleRightDownLeft, roomPostion, transform.rotation));
+                }
+
                 break;
             case 4:
+                genOutlines.Add(Instantiate(rooms.fourway, roomPostion, transform.rotation));
                 break;
         }
     }
