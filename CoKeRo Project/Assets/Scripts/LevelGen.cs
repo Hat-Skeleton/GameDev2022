@@ -35,6 +35,7 @@ public class LevelGen : MonoBehaviour
         Instantiate(layoutRoom, genPoint.position, genPoint.rotation).GetComponent<SpriteRenderer>().color = startColour;
         selectedDirection = (Direction)Random.Range(0, 4);
         MoveGenPoint();
+
         for(int i = 0; i < distanceToEnd; i++)
         {
             GameObject newRoom = Instantiate(layoutRoom, genPoint.position, genPoint.rotation);
@@ -55,6 +56,14 @@ public class LevelGen : MonoBehaviour
                 MoveGenPoint();
             }
         }
+        //room outlines
+        CreateRoomOutline(Vector3.zero);
+        foreach(GameObject room in layoutRoomObjects)
+        {
+            CreateRoomOutline(room.transform.position);
+        }
+        CreateRoomOutline(endRoom.transform.position);
+
     }
 
     // Update is called once per frame
@@ -85,9 +94,12 @@ public class LevelGen : MonoBehaviour
         }
     }
 
-    public void CreateRoomOutline()
+    public void CreateRoomOutline(Vector3 roomPostion)
     {
-
+        bool roomAbove = Physics2D.OverlapCircle(roomPostion + new Vector3(0f, yOffset, 0f), .2f, whatIsRoom);
+        bool roomBelow = Physics2D.OverlapCircle(roomPostion + new Vector3(0f, -yOffset, 0f), .2f, whatIsRoom);
+        bool roomLeft = Physics2D.OverlapCircle(roomPostion + new Vector3(-xOffset, 0f, 0f), .2f, whatIsRoom);
+        bool roomRight = Physics2D.OverlapCircle(roomPostion + new Vector3(xOffset, 0f, 0f), .2f, whatIsRoom);
     }
 }
 
