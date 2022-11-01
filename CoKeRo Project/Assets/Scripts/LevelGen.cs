@@ -84,6 +84,11 @@ public class LevelGen : MonoBehaviour
                 break;
         }
     }
+
+    public void CreateRoomOutline()
+    {
+
+    }
 }
 
 [System.Serializable]
