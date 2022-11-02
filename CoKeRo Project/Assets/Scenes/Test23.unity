@@ -168,6 +168,7 @@ MonoBehaviour:
   dashCooldwon: 1
   dashIframes: 0.5
   canMove: 0
+  isPaused: 0
 --- !u!4 &65253778
 Transform:
   m_ObjectHideFlags: 0
@@ -2129,6 +2130,7 @@ GameObject:
   - component: {fileID: 798505516}
   - component: {fileID: 798505515}
   - component: {fileID: 798505517}
+  - component: {fileID: 798505519}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2180,6 +2182,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToLoad: 4
   nextLevel: Test2
+--- !u!114 &798505519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798505514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35148b9741848e4ca19f748ac850ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &825268721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7198,7 +7212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323667407949248290, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3323667407949248350, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Pivot.x
@@ -7286,11 +7300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323667408028904746, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323667408028904746, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMax.x
