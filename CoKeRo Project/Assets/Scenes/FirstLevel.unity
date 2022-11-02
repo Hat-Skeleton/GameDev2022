@@ -7213,10 +7213,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3323667407949248290, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3323667407949248350, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7307,42 +7303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323667408028904746, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 798505514}
-    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341284056518573800, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341284056518573800, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341284057291685814, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
