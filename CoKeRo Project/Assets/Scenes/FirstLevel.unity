@@ -1790,7 +1790,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 798505516}
   - component: {fileID: 798505515}
   - component: {fileID: 798505517}
-  - component: {fileID: 798505519}
+  - component: {fileID: 798505520}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2182,7 +2182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToLoad: 4
   nextLevel: Test2
---- !u!114 &798505519
+--- !u!114 &798505520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2191,9 +2191,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 798505514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35148b9741848e4ca19f748ac850ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ca1c74bd6595144b95e46a6dee29878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  currentXP: 0
+  requiredXP: 100
 --- !u!1001 &825268721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7317,6 +7320,30 @@ PrefabInstance:
     - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 798505514}
+    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341284056518573800, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341284056518573800, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341284057291685814, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52504e51e136878419abc7db5169afaf, type: 3}

@@ -1488,7 +1488,6 @@ GameObject:
   - component: {fileID: 798505516}
   - component: {fileID: 798505515}
   - component: {fileID: 798505517}
-  - component: {fileID: 798505518}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1541,18 +1540,6 @@ MonoBehaviour:
   level: 1
   currentXP: 0
   requiredXP: 130
---- !u!114 &798505518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798505514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35148b9741848e4ca19f748ac850ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &939276184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,22 +3958,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5341284055846621798, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 798505518}
-    - target: {fileID: 5341284056031779039, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 798505518}
-    - target: {fileID: 5341284056345074884, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 798505518}
-    - target: {fileID: 5341284056518573800, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 798505518}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52504e51e136878419abc7db5169afaf, type: 3}
 --- !u!1001 &7319663512135329953
