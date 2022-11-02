@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove;
 
 
+    private float dashCounter, dashCoolCounter;
     public bool isPaused;
 
 
@@ -107,7 +108,9 @@ public class PlayerController : MonoBehaviour
 
 
 
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (dashCoolCounter <= 0 && dashCounter <= 0)
                 {
                     activeMoveSpeed = dashSpeed;
                     dashCounter = dashLength;
@@ -115,6 +118,8 @@ public class PlayerController : MonoBehaviour
                     animator.SetTrigger("Dash");
                     PlayerHealthController.instance.MakeInv(dashIframes);
                 }
+
+            }
         }
       
 
@@ -175,6 +180,7 @@ public class PlayerController : MonoBehaviour
     //flips pausestate
     public void PauseState()
     {
+        isPaused = !isPaused;
         UIController.instance.pauseScreen.SetActive(isPaused);
         Time.timeScale = Convert.ToInt32(!isPaused);
     }
