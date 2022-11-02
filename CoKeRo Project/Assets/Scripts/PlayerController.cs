@@ -32,19 +32,16 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed = 8f, dashLength = 0.5f, dashCooldwon = 1f, dashIframes = 0.5f;
     private float dashCounter;
     private float dashCoolCounter;
-    
-    
+
+
     public bool canMove;
-
-
-    private float dashCounter, dashCoolCounter;
     public bool isPaused;
 
 
     private void Awake()
     {
         instance = this;
-        
+
     }
 
     // Start is called before the first frame update
@@ -59,7 +56,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
         if (!isPaused)
         {
             moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -108,28 +104,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (dashCoolCounter <= 0 && dashCounter <= 0)
-                {
-                    activeMoveSpeed = dashSpeed;
-                    dashCounter = dashLength;
-
-                    animator.SetTrigger("Dash");
-                    PlayerHealthController.instance.MakeInv(dashIframes);
-                }
-
-            }
-        }
-      
-
-        //Switch Mode of pause Menu
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseState();
-        }
-
-
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -174,7 +148,12 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetBool("isMoving", false);
         }
-        
+
+        //Switch Mode of pause Menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseState();
+        }
     }
 
     //flips pausestate
