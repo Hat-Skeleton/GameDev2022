@@ -46,7 +46,7 @@ public class LevelSystem : MonoBehaviour
         {
             delayTimer += Time.deltaTime;
             UIController.instance.backXpBar.fillAmount = xpFraction;
-            if(delayTimer > 1)
+            if(delayTimer > 0.5)
             {
                 lerpTimer += Time.deltaTime;
                 float percentComplete = lerpTimer / 4;
