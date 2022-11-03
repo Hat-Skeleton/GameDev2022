@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2486740702223613615}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2486740701783631595
 GameObject:
@@ -61,7 +61,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2486740702223613615}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2486740701783631589
 SpriteRenderer:
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: -1136547349
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7537196482120660328, guid: 02027016afbc5d544ab92ba819bc8094, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bf981eb420cfbf4aab0c0ddfc3474ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 2486740702223613610}
   - component: {fileID: 3888655562857655397}
   m_Layer: 8
-  m_Name: Skeleton
+  m_Name: Cat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,8 +148,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2486740701783631588}
   - {fileID: 2156084352291616299}
+  - {fileID: 2486740701783631588}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -192,11 +192,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2486740702223613608}
-  moveSpeed: 3
-  rangeToChase: 7
+  moveSpeed: 6
+  rangeToChase: 4
   anim: {fileID: 2486740702223613610}
-  health: 150
-  shouldShoot: 1
+  health: 500
+  shouldShoot: 0
   bullet: {fileID: 2701522818381474674, guid: 5c3c5419cc9f77c488a8f561af0dd63c, type: 3}
   firePoint: {fileID: 2156084352291616299}
   enemyFireRate: 1.2
@@ -205,8 +205,8 @@ MonoBehaviour:
   shouldDropItem: 1
   itemsToDrop:
   - {fileID: 7319663511159528311, guid: 031a0735e668a99428fad15d641cab07, type: 3}
-  dropPercent: 10
-  xpAmmount: 20
+  dropPercent: 99
+  xpAmmount: 100
 --- !u!50 &2486740702223613608
 Rigidbody2D:
   serializedVersion: 4
