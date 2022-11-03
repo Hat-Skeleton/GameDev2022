@@ -1125,7 +1125,6 @@ MonoBehaviour:
   closeWhenEnter: 0
   doors:
   - {fileID: 2621807954842654840}
-  - {fileID: 0}
   roomActive: 0
 --- !u!50 &6422392894957316993
 Rigidbody2D:
