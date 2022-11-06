@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     [Header("Screens")]
     public GameObject deathScreen;
     public GameObject pauseScreen;
+    public GameObject levelUpScreen;
 
     [Header("HealthBar")]
     public Slider healthSlider;

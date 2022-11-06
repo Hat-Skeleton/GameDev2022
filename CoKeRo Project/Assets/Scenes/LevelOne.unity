@@ -169,6 +169,7 @@ MonoBehaviour:
   dashIframes: 0.5
   canMove: 0
   isPaused: 0
+  allowplay: 0
 --- !u!4 &65253778
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,13 +1007,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 803878943, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323667407949248290, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Name
       value: UICanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667407949248290, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3323667407949248350, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Pivot.x
@@ -1105,18 +1106,6 @@ PrefabInstance:
     - target: {fileID: 3323667408028904746, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323667408401484166, guid: 52504e51e136878419abc7db5169afaf, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52504e51e136878419abc7db5169afaf, type: 3}

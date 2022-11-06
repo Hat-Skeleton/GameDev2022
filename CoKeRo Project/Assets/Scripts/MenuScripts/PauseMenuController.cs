@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEditor;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -29,4 +30,6 @@ public class PauseMenuController : MonoBehaviour
         SceneManager.LoadSceneAsync("MainMenu");
         Time.timeScale = 1;
     }
+
+
 }

@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove;
     public bool isPaused;
+    public bool allowplay;
 
 
     private void Awake()
@@ -49,14 +50,14 @@ public class PlayerController : MonoBehaviour
     {
         canMove = true;
         cam = Camera.main;
-
+        allowplay = true;
         activeMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isPaused)
+        if (allowplay)
         {
             moveInput.x = Input.GetAxisRaw("Horizontal");
             moveInput.y = Input.GetAxisRaw("Vertical");
@@ -160,7 +161,13 @@ public class PlayerController : MonoBehaviour
     public void PauseState()
     {
         isPaused = !isPaused;
+        DisablePlay();
         UIController.instance.pauseScreen.SetActive(isPaused);
         Time.timeScale = Convert.ToInt32(!isPaused);
+    }
+
+    public void DisablePlay() 
+    {
+        allowplay = !allowplay;
     }
 }

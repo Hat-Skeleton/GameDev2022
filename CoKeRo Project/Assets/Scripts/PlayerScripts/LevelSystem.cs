@@ -68,6 +68,9 @@ public class LevelSystem : MonoBehaviour
         UIController.instance.backXpBar.fillAmount = 0f;
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
         UIController.instance.levelText.text = string.Format("Level : {0}", level);
+        UIController.instance.levelUpScreen.SetActive(true);
+        Time.timeScale = 0;
+        PlayerController.instance.DisablePlay();
     }
 
 }
