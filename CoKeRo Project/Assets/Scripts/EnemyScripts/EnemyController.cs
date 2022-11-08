@@ -67,7 +67,6 @@ public class EnemyController : MonoBehaviour
                 {
                     fireCounter = enemyFireRate;
                     Instantiate(bullet, firePoint.position, firePoint.rotation);
-                    AudioMananger.instance.PlayFX(13);
                 }
             }
         }
@@ -89,13 +88,10 @@ public class EnemyController : MonoBehaviour
     {
         health -= damage;
 
-        AudioMananger.instance.PlayFX(2);
-
-        if (health <= 0)
+        if(health <= 0)
         {
             Destroy(gameObject);
             LevelSystem.instance.currentXP += xpAmmount;
-            AudioMananger.instance.PlayFX(1);
             //drop items
             if(shouldDropItem)
             {

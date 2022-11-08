@@ -8,13 +8,11 @@ public class PlayerHealthController : MonoBehaviour
 {
     public static PlayerHealthController instance;
 
-    public int currentHealth;
-    public int maxHeath;
+    static public int currentHealth = 5;
+    static public int maxHeath = 5;
 
     public float iframes = 1f;
     private float iframeCount;
-
-    public int healthSound;
 
     private void Awake()
     {
@@ -23,7 +21,11 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHeath;
+        
+
+        
+
+        
 
         UIController.instance.healthSlider.maxValue = maxHeath;
         UIController.instance.healthSlider.value = currentHealth;
@@ -48,7 +50,6 @@ public class PlayerHealthController : MonoBehaviour
     {
         if(iframeCount <= 0)
         {
-            AudioMananger.instance.PlayFX(11);
             currentHealth--;
 
             iframeCount = iframes;
@@ -59,9 +60,6 @@ public class PlayerHealthController : MonoBehaviour
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
-
-                AudioMananger.instance.PlayGameOver();
-                AudioMananger.instance.PlayFX(8);
             }
 
             UIController.instance.healthSlider.value = currentHealth;
@@ -81,7 +79,6 @@ public class PlayerHealthController : MonoBehaviour
         if (currentHealth != maxHeath)
         {
             currentHealth += heal;
-            AudioMananger.instance.PlayFX(7);
         }
 
         UIController.instance.healthSlider.value = currentHealth;
@@ -91,7 +88,8 @@ public class PlayerHealthController : MonoBehaviour
     public void UpdateHealth(int hpincrease)
     {
         maxHeath += hpincrease;
-        currentHealth = maxHeath;
+
+        currentHealth += hpincrease;
         UIController.instance.healthSlider.maxValue = maxHeath;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthBarText.text = string.Format("{0} / {1}", currentHealth, maxHeath);
