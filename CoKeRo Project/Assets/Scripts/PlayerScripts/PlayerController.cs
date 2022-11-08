@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
 
     }
 

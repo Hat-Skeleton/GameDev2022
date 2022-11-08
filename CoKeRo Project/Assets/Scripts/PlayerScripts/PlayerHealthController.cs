@@ -8,8 +8,8 @@ public class PlayerHealthController : MonoBehaviour
 {
     public static PlayerHealthController instance;
 
-    public int currentHealth;
-    public int maxHeath;
+    static public int currentHealth = 5;
+    static public int maxHeath = 5;
 
     public float iframes = 1f;
     private float iframeCount;
@@ -21,7 +21,11 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHeath;
+        
+
+        
+
+        
 
         UIController.instance.healthSlider.maxValue = maxHeath;
         UIController.instance.healthSlider.value = currentHealth;

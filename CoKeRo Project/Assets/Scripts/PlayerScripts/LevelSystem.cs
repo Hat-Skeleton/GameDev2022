@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,9 +65,11 @@ public class LevelSystem : MonoBehaviour
     public void LevelUp()
     {
         level++;
+        
         UIController.instance.frontXpBar.fillAmount = 0f;
         UIController.instance.backXpBar.fillAmount = 0f;
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
+        requiredXP = Mathf.RoundToInt(requiredXP * 2.5f);
         UIController.instance.levelText.text = string.Format("Level : {0}", level);
         UIController.instance.levelUpScreen.SetActive(true);
         Time.timeScale = 0;
