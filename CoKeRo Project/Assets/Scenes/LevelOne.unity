@@ -1005,10 +1005,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733322344, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 641d5833339c73c4e8cd9aec13eeb655, type: 3}
     - target: {fileID: 803878943, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1507692427, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 09db52766d3568a4d94fb9af49c242f9, type: 3}
+    - target: {fileID: 3323667406867263560, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 09db52766d3568a4d94fb9af49c242f9, type: 3}
     - target: {fileID: 3323667407949248290, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Name
       value: UICanvas
