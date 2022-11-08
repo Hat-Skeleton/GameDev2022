@@ -25,6 +25,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        AudioMananger.instance.PlayFX(4);
         if (other.tag == "Enemy")
         {
             Instantiate(bulletHitEnemy, transform.position, transform.rotation);
