@@ -84,7 +84,8 @@ public class PlayerHealthController : MonoBehaviour
     public void UpdateHealth(int hpincrease)
     {
         maxHeath += hpincrease;
-        currentHealth = maxHeath;
+
+        currentHealth += hpincrease;
         UIController.instance.healthSlider.maxValue = maxHeath;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthBarText.text = string.Format("{0} / {1}", currentHealth, maxHeath);

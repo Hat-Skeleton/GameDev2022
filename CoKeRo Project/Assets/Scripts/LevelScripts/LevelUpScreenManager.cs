@@ -14,7 +14,7 @@ public class LevelUpScreenManager : MonoBehaviour
 
     public void HealthUp()
     {
-        PlayerHealthController.instance.UpdateHealth(3);
+        PlayerHealthController.instance.UpdateHealth(1);
         DisableScreen();
     }
 
