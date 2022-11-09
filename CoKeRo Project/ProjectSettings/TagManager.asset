@@ -18,9 +18,9 @@ TagManager:
   - Enemy
   - EnemyBullet
   - Pickup
-  - 
-  - 
-  - 
+  - IgnoreBullets
+  - RoomLayers
+  - Objects
   - 
   - 
   - 

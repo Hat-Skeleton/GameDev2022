@@ -21,10 +21,11 @@ public class HealthPickup : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if(PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHeath)
+            if(PlayerHealthController.currentHealth != PlayerHealthController.maxHeath)
             {
                 PlayerHealthController.instance.HealPlayer(healAmmount);
                 Destroy(gameObject);
+                AudioManager.instance.PlaySFX(7);
             }
             
         }
