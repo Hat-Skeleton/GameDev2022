@@ -18,6 +18,16 @@ public class LevelUpScreenManager : MonoBehaviour
         DisableScreen();
     }
 
+    public void DamageUp()
+    {
+
+    }
+
+    public void SpeedUp()
+    {
+
+    }
+
     public void EnableScreen()
     {
         UIController.instance.levelUpScreen.SetActive(true);
