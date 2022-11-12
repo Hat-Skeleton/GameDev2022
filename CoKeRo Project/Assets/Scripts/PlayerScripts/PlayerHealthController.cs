@@ -8,28 +8,33 @@ public class PlayerHealthController : MonoBehaviour
 {
     public static PlayerHealthController instance;
 
-    static public int currentHealth = 5;
-    static public int maxHeath = 5;
+    public int currentHealth = 5;
+    public int maxHeath = 5;
 
     public float iframes = 1f;
     private float iframeCount;
 
     private void Awake()
     {
-        instance = this; 
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
-
-        
-
-        
 
         UIController.instance.healthSlider.maxValue = maxHeath;
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthBarText.text = string.Format("{0} / {1}",currentHealth,maxHeath);
+        UIController.instance.healthBarText.text = string.Format("{0} / {1}", currentHealth, maxHeath);
+
+
+
     }
 
     // Update is called once per frame

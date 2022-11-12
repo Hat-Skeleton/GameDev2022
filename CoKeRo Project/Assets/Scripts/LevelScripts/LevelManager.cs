@@ -13,7 +13,14 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     // Start is called before the first frame update

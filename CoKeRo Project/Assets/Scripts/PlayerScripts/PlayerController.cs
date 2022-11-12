@@ -41,8 +41,15 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-        
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
 
     }
 

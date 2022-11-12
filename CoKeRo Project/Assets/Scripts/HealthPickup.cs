@@ -21,7 +21,7 @@ public class HealthPickup : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if(PlayerHealthController.currentHealth != PlayerHealthController.maxHeath)
+            if(PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHeath)
             {
                 PlayerHealthController.instance.HealPlayer(healAmmount);
                 Destroy(gameObject);

@@ -16,13 +16,20 @@ public class LevelSystem : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
+        UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
     }
     // Start is called before the first frame update
     void Start()
     {
-        UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
-        UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
     }
 
     // Update is called once per frame
