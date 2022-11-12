@@ -23,7 +23,8 @@ public class LevelExit : MonoBehaviour
         if(other.tag == "Player")
         {
             //SceneManager.LoadScene(levelToLoad);
-            
+            CameraController.instance.transform.position = new Vector3(0, 0, -10);
+            PlayerController.instance.Resetplayer();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

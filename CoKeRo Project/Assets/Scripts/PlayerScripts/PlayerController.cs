@@ -49,8 +49,6 @@ public class PlayerController : MonoBehaviour
         {
             instance = this;
         }
-
-
     }
 
     // Start is called before the first frame update
@@ -150,6 +148,11 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("isMoving", false);
             }
+
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                Resetplayer();
+            }
         }
 
         else
@@ -177,5 +180,10 @@ public class PlayerController : MonoBehaviour
     public void DisablePlay() 
     {
         allowplay = !allowplay;
+    }
+
+    public void Resetplayer()
+    {
+        this.transform.position = new Vector3(-7, 0, 0);
     }
 }
