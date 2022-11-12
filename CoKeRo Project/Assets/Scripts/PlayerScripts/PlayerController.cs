@@ -189,8 +189,9 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseSpeed()
     {
-        activeMoveSpeed += 0.1f;
+        moveSpeed *= 1.1f;
+        activeMoveSpeed *= 1.1f;
         dashCooldwon *= 0.9f;
-        fireRate -= 0.05f;
+        fireRate *= 0.9f;
     }
 }

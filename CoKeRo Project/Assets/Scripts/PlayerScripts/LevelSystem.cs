@@ -38,7 +38,7 @@ public class LevelSystem : MonoBehaviour
         UpdateXpUI();
         if (Input.GetKeyDown(KeyCode.Equals))
         {
-            GainExperienceFlatRate(20);
+            GainExperienceFlatRate(5);
         }
         if(currentXP > requiredXP)
         {
@@ -65,7 +65,7 @@ public class LevelSystem : MonoBehaviour
 
     public void GainExperienceFlatRate(float xpGained)
     {
-        currentXP += xpGained;
+        currentXP += requiredXP/xpGained;
         lerpTimer = 0f;
     }
 
@@ -76,7 +76,7 @@ public class LevelSystem : MonoBehaviour
         UIController.instance.frontXpBar.fillAmount = 0f;
         UIController.instance.backXpBar.fillAmount = 0f;
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
-        requiredXP = Mathf.RoundToInt(requiredXP * 2.5f);
+        requiredXP = Mathf.RoundToInt(requiredXP * 1.8f);
         UIController.instance.levelText.text = string.Format("Level : {0}", level);
         UIController.instance.levelUpScreen.SetActive(true);
         Time.timeScale = 0;
