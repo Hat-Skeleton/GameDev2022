@@ -32,7 +32,8 @@ public class LevelUpScreenManager : MonoBehaviour
 
     public void SpeedUp()
     {
-
+        PlayerController.instance.IncreaseSpeed();
+        DisableScreen();
     }
 
     public void EnableScreen()

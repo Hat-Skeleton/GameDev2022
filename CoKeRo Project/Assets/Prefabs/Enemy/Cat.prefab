@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2486740702223613608}
   moveSpeed: 6
-  rangeToChase: 4
+  rangeToChase: 5
   anim: {fileID: 2486740702223613610}
   health: 500
   shouldShoot: 0

@@ -25,19 +25,26 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.name.Equals("PlayerBullet"))
         {
-            Instantiate(bulletHitEnemy, transform.position, transform.rotation);
+
         }
         else
         {
-            Instantiate(bulletHit, transform.position, transform.rotation);
-        }
-        Destroy(gameObject);
+            if (other.tag == "Enemy")
+            {
+                Instantiate(bulletHitEnemy, transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(bulletHit, transform.position, transform.rotation);
+            }
+            Destroy(gameObject);
 
-        if(other.tag == "Enemy")
-        {
-            other.GetComponent<EnemyController>().DamageEmeny(bulletDamage);
+            if (other.tag == "Enemy")
+            {
+                other.GetComponent<EnemyController>().DamageEmeny(bulletDamage);
+            }
         }
         
     }

@@ -186,4 +186,11 @@ public class PlayerController : MonoBehaviour
     {
         this.transform.position = new Vector3(-7, 0, 0);
     }
+
+    public void IncreaseSpeed()
+    {
+        activeMoveSpeed += 0.1f;
+        dashCooldwon *= 0.9f;
+        fireRate -= 0.05f;
+    }
 }

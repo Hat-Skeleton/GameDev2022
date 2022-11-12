@@ -178,7 +178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65253776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -588.7502, y: -353.27255, z: 1.15284}
+  m_LocalPosition: {x: -6.789978, y: 0.05999756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -312,7 +312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150659834
 GameObject:
@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 1343039257298991532, guid: 84d7ca808a6d09647bcccbab31d37ce7, type: 3}
     - target: {fileID: 1148740497114322458, guid: 38e99bad442ee504aa118ec98da4fd4b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1148740497114322458, guid: 38e99bad442ee504aa118ec98da4fd4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,13 +981,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1331482370}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -1135,7 +1135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331482368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 581.9602, y: 353.33255, z: -1.15284}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1143,8 +1143,9 @@ Transform:
   - {fileID: 1375272843}
   - {fileID: 416438492}
   - {fileID: 65253778}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1375272843 stripped
 RectTransform:
@@ -1273,6 +1274,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331482370}
     m_Modifications:
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3323667408000309535}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DamageUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpScreenManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 623696245, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 733322344, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1325,6 +1354,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 09db52766d3568a4d94fb9af49c242f9, type: 3}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3323667408000309535}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpeedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpScreenManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093658129, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3323667406867263560, guid: 52504e51e136878419abc7db5169afaf, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1427,3 +1484,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+--- !u!114 &3323667408000309535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 803878947, guid: 52504e51e136878419abc7db5169afaf, type: 3}
+  m_PrefabInstance: {fileID: 3323667408000309534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0219e00f59867b240affced10f1eb9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
