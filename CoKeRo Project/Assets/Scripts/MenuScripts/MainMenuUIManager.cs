@@ -13,6 +13,11 @@ public class MainMenuUIManager : MonoBehaviour
         SceneManager.LoadSceneAsync(levelOne);
     }
 
+    public void LoadControlsScene()
+    {
+        SceneManager.LoadSceneAsync("HowToPlay");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
