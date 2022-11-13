@@ -92,17 +92,19 @@ public class PlayerController : MonoBehaviour
             float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
             gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
-
-            if (Input.GetMouseButtonDown(0))
+            shotCounter -= Time.deltaTime;
+            if (shotCounter <= 0)
             {
-                Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                shotCounter = fireRate;
-                AudioManager.instance.PlaySFX(12);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+                    shotCounter = fireRate;
+                    AudioManager.instance.PlaySFX(12);
+                }
             }
 
             if (Input.GetMouseButton(0))
             {
-                shotCounter -= Time.deltaTime;
                 if (shotCounter <= 0)
                 {
                     Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
