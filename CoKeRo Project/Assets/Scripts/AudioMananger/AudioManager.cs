@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
+    
 {
     public AudioSource levelMusic, gameOverMusic, winMusic;
     public static AudioManager instance;
@@ -10,25 +12,18 @@ public class AudioManager : MonoBehaviour
 
     public void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
+           instance = this;
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void PlayGameOver()

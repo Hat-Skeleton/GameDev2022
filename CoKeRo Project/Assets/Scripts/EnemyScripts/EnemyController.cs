@@ -88,11 +88,12 @@ public class EnemyController : MonoBehaviour
     public void DamageEmeny(int damage)
     {
         health -= damage;
+        AudioManager.instance.PlaySFX(2);
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
-            AudioManager.instance.PlaySFX(2);
+            AudioManager.instance.PlaySFX(1);
 
             LevelSystem.instance.currentXP += xpAmmount;
             //drop items
