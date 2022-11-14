@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public bool allowplay;
 
 
+
     private void Awake()
     {
         if (instance != null)

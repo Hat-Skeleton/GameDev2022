@@ -49,6 +49,7 @@ public class PlayerHealthController : MonoBehaviour
                 PlayerController.instance.bodySr.color = new Color(PlayerController.instance.bodySr.color.r, PlayerController.instance.bodySr.color.g, PlayerController.instance.bodySr.color.b, 1f);
             }
         }
+
     }
 
     public void DamagePlayer()
@@ -66,6 +67,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
+                
                 AudioManager.instance.PlayGameOver();
                 AudioManager.instance.PlaySFX(8);
             }
