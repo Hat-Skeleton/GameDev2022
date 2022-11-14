@@ -63,11 +63,11 @@ public class PlayerHealthController : MonoBehaviour
 
             PlayerController.instance.bodySr.color = new Color(PlayerController.instance.bodySr.color.r, PlayerController.instance.bodySr.color.g, PlayerController.instance.bodySr.color.b, 0.5f);
 
+            //Enable death screen
             if (currentHealth <= 0)
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
-                
                 AudioManager.instance.PlayGameOver();
                 AudioManager.instance.PlaySFX(8);
             }

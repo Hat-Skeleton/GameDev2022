@@ -103,7 +103,7 @@ public class LevelGen : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKey(KeyCode.R))
+        if(Input.GetKey(KeyCode.L))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

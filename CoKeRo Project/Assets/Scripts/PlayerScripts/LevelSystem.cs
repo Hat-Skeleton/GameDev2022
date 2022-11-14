@@ -24,12 +24,12 @@ public class LevelSystem : MonoBehaviour
         {
             instance = this;
         }
-        UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
-        UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
     }
     // Start is called before the first frame update
     void Start()
     {
+        UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
+        UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
     }
 
     // Update is called once per frame

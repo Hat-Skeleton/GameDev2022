@@ -23,9 +23,5 @@ public class DontDestroyMenuStuff : MonoBehaviour
 
     private void Update()
     {
-        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") && !SceneManager.GetActiveScene().name.Equals("HowToPlay"))
-        {
-            Destroy(this.gameObject);
-        }
     }
 }
