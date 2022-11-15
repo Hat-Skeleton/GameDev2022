@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUpScreenManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static LevelUpScreenManager instance;
+
+    [Header("LevelUp Buttons")]
+    public Button weaponUp;
+    public Button speedUp;
+    public Button healthUp;
+
+    [Header("Bullet Images")]
+    public Image bulletimage;
 
     private void Awake()
     {
@@ -27,7 +37,19 @@ public class LevelUpScreenManager : MonoBehaviour
 
     public void DamageUp()
     {
-
+        if ((PlayerController.instance.bullets.Length - 1) > PlayerController.instance.bulletlevel)
+        {
+            PlayerController.instance.LevelBullet();
+            DisableScreen();
+            if (PlayerController.instance.bullets.Length - 1 == PlayerController.instance.bulletlevel)
+            {
+                weaponUp.enabled = false;
+            }
+            else
+            {
+                bulletimage.sprite = PlayerController.instance.bullets[PlayerController.instance.bulletlevel + 1].GetComponent<SpriteRenderer>().sprite;
+            }
+        }
     }
 
     public void SpeedUp()

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
 
-    public GameObject bulletToFire;
+    public GameObject[] bullets;
     public Transform firePoint;
 
     public float fireRate;
@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public bool isPaused;
     public bool allowplay;
 
+    public int bulletlevel;
+    private GameObject bulletToFire;
 
 
     private void Awake()
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         allowplay = true;
         activeMoveSpeed = moveSpeed;
+        bulletToFire = bullets[0];
     }
 
     // Update is called once per frame
@@ -200,4 +203,11 @@ public class PlayerController : MonoBehaviour
         dashCooldwon *= 0.9f;
         fireRate *= 0.9f;
     }
+
+    public void LevelBullet() 
+    {
+        bulletlevel++;
+        bulletToFire = bullets[bulletlevel];
+    }
+
 }
