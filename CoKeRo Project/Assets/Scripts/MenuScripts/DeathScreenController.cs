@@ -8,6 +8,7 @@ public class DeathScreenController : MonoBehaviour
 {
     public static DeathScreenController instance;
     public GameObject deathscreen;
+    public GameObject reloadthis;
     private void Awake()
     {
         if (instance != null)
@@ -36,7 +37,7 @@ public class DeathScreenController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.R))
             {
-                SceneManager.LoadSceneAsync("MainMenu");
+                Destroy(reloadthis);
                 SceneManager.LoadSceneAsync("LevelOne");
                 Debug.Log("Loading LevelOne");
             }
