@@ -39,7 +39,6 @@ public class LevelManager : MonoBehaviour
     {
         PlayerController.instance.canMove = false;
 
-        UIController.instance.startFadeToBlack();
 
         yield return new WaitForSeconds(waitToLoad);
 
