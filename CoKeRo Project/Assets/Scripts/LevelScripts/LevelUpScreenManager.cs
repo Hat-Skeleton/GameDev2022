@@ -17,6 +17,8 @@ public class LevelUpScreenManager : MonoBehaviour
     [Header("Bullet Images")]
     public Image bulletimage;
 
+    private int boostlvl;
+
     private void Awake()
     {
         if (instance != null)
@@ -43,7 +45,7 @@ public class LevelUpScreenManager : MonoBehaviour
             DisableScreen();
             if (PlayerController.instance.bullets.Length - 1 == PlayerController.instance.bulletlevel)
             {
-                weaponUp.enabled = false;
+                weaponUp.interactable = false;
             }
             else
             {
@@ -56,6 +58,11 @@ public class LevelUpScreenManager : MonoBehaviour
     {
         PlayerController.instance.IncreaseSpeed();
         DisableScreen();
+        boostlvl++;
+        if(boostlvl == 8)
+        {
+            speedUp.interactable = false;
+        }
     }
 
     public void EnableScreen()
