@@ -984,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Screen: {fileID: 229462353}
+  starttext: {fileID: 1628885374}
 --- !u!1 &287908853
 GameObject:
   m_ObjectHideFlags: 0
