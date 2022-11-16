@@ -50,18 +50,18 @@ public class LevelUpScreenManager : MonoBehaviour
 
     public void DamageUp()
     {
-        if (amtBullets >= bulletlvl)
+        if (amtBullets > bulletlvl)
         {
             PlayerController.instance.LevelBullet();
             bulletlvl++;
             DisableScreen();
-            if (amtBullets == bulletlvl + 1)
+            if (amtBullets == bulletlvl)
             {
                 weaponUp.interactable = false;
             }
             else
             {
-                bulletimage.sprite = PlayerController.instance.bullets[bulletlvl + 1].GetComponent<SpriteRenderer>().sprite;
+                bulletimage.sprite = PlayerController.instance.bullets[bulletlvl].GetComponent<SpriteRenderer>().sprite;
             }
         }
     }
