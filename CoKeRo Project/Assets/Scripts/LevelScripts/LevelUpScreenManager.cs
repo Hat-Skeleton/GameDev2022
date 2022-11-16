@@ -18,6 +18,8 @@ public class LevelUpScreenManager : MonoBehaviour
     public Image bulletimage;
 
     private int boostlvl;
+    private int amtBullets;
+    private int bulletlvl;
 
     private void Awake()
     {
@@ -31,6 +33,15 @@ public class LevelUpScreenManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        amtBullets = PlayerController.instance.bullets.Length;
+        bulletlvl = 1;
+        Debug.Log(amtBullets);
+    }
+    public void OnEnable()
+    {
+    }
     public void HealthUp()
     {
         PlayerHealthController.instance.UpdateHealth(1);
@@ -39,17 +50,18 @@ public class LevelUpScreenManager : MonoBehaviour
 
     public void DamageUp()
     {
-        if ((PlayerController.instance.bullets.Length - 1) > PlayerController.instance.bulletlevel)
+        if (amtBullets >= bulletlvl)
         {
             PlayerController.instance.LevelBullet();
+            bulletlvl++;
             DisableScreen();
-            if (PlayerController.instance.bullets.Length - 1 == PlayerController.instance.bulletlevel)
+            if (amtBullets == bulletlvl + 1)
             {
                 weaponUp.interactable = false;
             }
             else
             {
-                bulletimage.sprite = PlayerController.instance.bullets[PlayerController.instance.bulletlevel + 1].GetComponent<SpriteRenderer>().sprite;
+                bulletimage.sprite = PlayerController.instance.bullets[bulletlvl + 1].GetComponent<SpriteRenderer>().sprite;
             }
         }
     }
