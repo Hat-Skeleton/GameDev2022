@@ -26,7 +26,7 @@ public class LevelExit : MonoBehaviour
             CameraController.instance.transform.position = new Vector3(0, 0, -10);
             PlayerController.instance.Resetplayer();
             PlayerController.instance.layerOfDungeon++;
-            UIController.instance.levelsdecended.text = string.Format("Levels Descended {0}", PlayerController.instance.layerOfDungeon);
+            UIController.instance.levelsdecended.text = string.Format("Levels Descended: {0}", PlayerController.instance.layerOfDungeon);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
