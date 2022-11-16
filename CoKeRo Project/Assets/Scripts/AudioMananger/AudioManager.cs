@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
     
 {
-    public AudioSource levelMusic, gameOverMusic, winMusic;
+    public AudioSource levelMusic;/*, gameOverMusic, winMusic;*/
     public static AudioManager instance;
     public AudioSource[] sfx;
 
@@ -32,17 +32,17 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    public void PlayGameOver()
-    {
-        levelMusic.Stop();
-        gameOverMusic.Play();
-    }
+    //public void PlayGameOver()
+    //{
+    //    levelMusic.Stop();
+    //    gameOverMusic.Play();
+    //}
 
-    public void PlayLevelWin()
-    {
-        levelMusic.Stop();
-        winMusic.Play();
-    }
+    //public void PlayLevelWin()
+    //{
+    //    levelMusic.Stop();
+    //    winMusic.Play();
+    //}
 
     public void PlaySFX(int sfxToPLay)
     {
