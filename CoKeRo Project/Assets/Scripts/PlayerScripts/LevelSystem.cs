@@ -14,6 +14,10 @@ public class LevelSystem : MonoBehaviour
     private float lerpTimer;
     private float delayTimer;
 
+    public float additionMultiplier = 300;
+    public float powerMultiplier = 2;
+    public float divisionMultiplier = 7;
+
     private void Awake()
     {
         if (instance != null)
@@ -30,6 +34,7 @@ public class LevelSystem : MonoBehaviour
     {
         UIController.instance.frontXpBar.fillAmount = currentXP / requiredXP;
         UIController.instance.backXpBar.fillAmount = currentXP / requiredXP;
+        requiredXP = CalculateRequiredXp();
     }
 
     // Update is called once per frame
@@ -76,11 +81,20 @@ public class LevelSystem : MonoBehaviour
         UIController.instance.frontXpBar.fillAmount = 0f;
         UIController.instance.backXpBar.fillAmount = 0f;
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
-        requiredXP = Mathf.RoundToInt(requiredXP * 1.8f);
+        requiredXP = CalculateRequiredXp();
         UIController.instance.levelText.text = string.Format("Level : {0}", level);
         UIController.instance.levelUpScreen.SetActive(true);
         Time.timeScale = 0;
         PlayerController.instance.DisablePlay();
     }
 
+    public int CalculateRequiredXp()
+    {
+        int solveForRequiredXp = 0;
+        for(int levelCycle = 1; levelCycle <= level; levelCycle++)
+        {
+            solveForRequiredXp += (int)Mathf.Floor(levelCycle + additionMultiplier * Mathf.Pow(powerMultiplier, levelCycle / divisionMultiplier));
+        }
+        return solveForRequiredXp / 4;
+    }
 }
