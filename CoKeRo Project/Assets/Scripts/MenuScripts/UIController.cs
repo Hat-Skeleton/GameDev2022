@@ -22,6 +22,8 @@ public class UIController : MonoBehaviour
     public Image backXpBar;
     public TMP_Text levelText;
 
+
+    public TMP_Text levelsdecended;
     public Image fade;
     public float fadeSpeed;
 

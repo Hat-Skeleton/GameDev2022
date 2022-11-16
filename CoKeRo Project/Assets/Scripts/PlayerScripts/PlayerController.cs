@@ -33,12 +33,13 @@ public class PlayerController : MonoBehaviour
     private float dashCounter;
     private float dashCoolCounter;
 
-
+    [Header("CanPlay variables")]
     public bool canMove;
     public bool isPaused;
     public bool allowplay;
 
     public int bulletlevel;
+    public int layerOfDungeon;
     private GameObject bulletToFire;
 
 
